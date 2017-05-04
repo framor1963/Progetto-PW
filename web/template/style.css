@@ -1,0 +1,561 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-apr-2017, 19.12.23
+    Author     : manuel
+*/
+
+
+/*------elements----------*/
+
+* {
+    transition: all .28s ease-in-out;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Verdana,Geneva,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.heading,label{
+    font-weight: normal;
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+}
+
+a{
+    color: #006062;
+    text-decoration: none;
+    outline: none;
+}
+
+input, textArea, select{
+    display: block;
+    margin: 5px auto;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+}
+
+textArea{
+    height: 80px;
+    resize: none;
+    overflow-y: scroll;
+}
+
+input[type = radio], [type = checkbox]{
+    height: 20px;
+}
+
+fieldset{
+    margin: 0;
+    border: none;
+}
+
+form{
+    margin: 5px auto;
+    display: block;
+    text-align: left;
+    padding: 10px 25%;
+    border: 5px solid #006062;
+}
+
+form h1{
+    font-size: 33px;
+}
+
+i:hover{
+    background-color: #006062;
+    color: #fff;
+    border-color: #fff;
+}
+
+/*---------------classes---------------*/
+
+.heading{
+    text-transform: uppercase
+}
+
+.hoc{
+    max-width: 978px;
+    display: block;
+    margin: 0 auto;
+}
+
+.clear,.group{
+    clear: both;
+    display: block;
+}
+
+.clear:before, .group:before{
+    display: table;
+    content: "";
+}
+
+    
+.wrapper{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.btn{
+    color: #FFF;
+    background-color: #006062;
+    border-color: #006062;
+    display: inline-block;
+    padding: 8px 18px 10px;
+    text-transform: uppercase;
+    border: 1px solid;
+    text-decoration: none;
+    min-width: 100px;
+    text-align: center;
+}
+
+button.btn{
+    border-color: #006062;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: rgba(255,255,255,.55);
+}
+
+.fl-left{
+    float: left;
+}
+
+.fl-right{
+    float: right;
+}
+
+.row1{
+    background-color:#FFF;
+    color: #000;
+    
+}
+
+.row2{
+    color: #FFF;
+    background-color: #006062;
+    
+}
+
+.row3{
+    color: #474747;
+    background-color: #FFFFFF;
+}
+
+.row4{
+    color:#FFF; 
+    background-color:#111;
+}
+
+
+
+.bged{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+
+.container{
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+.sectiontitle{
+    display: block;
+    max-width: 55%;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.sectiontitle > .heading{
+    font-size: 2.5em;
+}
+
+.overlay{
+    z-index: 1;
+}
+
+/*
+
+letto su w3schools.com, da applicare ai padri di elementi floating se essi sono troppo grandi
+*/
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.one_third{
+    display: inline-block;
+    margin: 0 0 0 3%;
+    padding: 0;
+    width: 30%;
+    float: left;
+}
+
+.one_third form{
+    display: block;
+    width: auto;
+}
+
+.one_third input{
+    display: block;
+    width: 100%;
+}
+
+.btmspace-30{
+    margin-bottom: 30px;
+}
+
+.btmspace-50{
+    margin-bottom: 50px;
+}
+
+.topspace-5{
+    margin-top: 5px;
+}
+
+.nospace{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.txtwrap{
+    background-color: #f5f5f5;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    min-height: 300px;
+    position: relative;
+}
+
+.txtwrap .meta li{
+    display: inline-block;
+    font-size: .8rem;
+}
+
+.txtwrap footer{
+    position: absolute;
+    bottom: 10px;
+    
+}
+
+
+.split section{
+    display: block;
+    position: relative;
+    float: right;
+    width: 50%;
+    padding: 100px 50px;
+    
+}
+
+.split section,.split section:after{
+    display: block;
+    color: #474747;
+    background-color: rgba(255,255,255,.9);
+}
+
+.elements li{
+    margin-bottom: 50px;
+}
+
+.elements article{
+    position: relative;
+    display: block;
+    min-height: 80px;
+    padding: 0 0 0 70px;
+}
+
+.elements article i{
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    margin: 0;
+    border: 1px solid;
+    text-align: center;
+    font-size: 20px;   
+}
+
+.one_quarter, .three_quarter{
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 3%;
+    list-style: none;
+    width: 20%;
+}
+
+.one_quarter{
+    border-right: 1px solid silver;
+    padding-right: 20px;
+}
+
+.three_quarter{
+    width: 70%;
+}
+
+.sdb_holder ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sdb_holder ul li{
+    border-bottom: 1px solid silver;
+    margin-bottom: 5px;
+}
+
+/*-----------------IDs------------------------ */
+#logo-header{
+    padding: 25px 0;
+    display: block;
+    margin: 0 auto;         
+}
+
+
+#logo-header h1{
+    font-size: 26px;
+    margin: 0;
+}
+
+#logo-header h2{
+    margin: 0;
+}
+
+#mainav {   
+    position: relative;
+    margin: 0 auto; 
+    padding: 0;
+    line-height: normal;
+    display: block;
+    text-align: center;
+}
+
+#mainav ul {
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+#mainav li{
+    display: inline-block;
+    position: relative;
+    margin: 0 30px 0 0;
+    padding: 0;
+}
+
+
+#mainav a{    
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding: 20px 0;
+    
+}
+
+#mainav a:hover, #mainav a:active{
+    color: #000;
+}
+
+#pageintro{
+    padding: 200px 0;
+    text-align: center;
+}
+#pageintro .heading{
+    margin-bottom:20px; 
+    font-size:2.5em;
+    font-weight:400;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+#pageintro input{
+	width: 50%;
+	margin: 0 25% 5px 25%;
+	height: 3rem;
+	border: 0.55px solid #FFFFFF;
+        border-radius: 4px;
+	padding: 1px 5px;
+	display: block;
+	background-color: rgba(0,0,0,.5);
+        color: #FFF;
+}
+
+#pageintro footer{
+    margin-top: 50px;
+}
+
+#pageintro button{
+    font-size: 1.5em;
+}
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{
+    padding:80px 0;
+    font-size: .8rem;
+    margin: 0 auto;
+    display: block;
+}
+
+#footer .heading{
+    margin-bottom:50px; 
+    font-size:1.2rem;
+}
+
+#footer .linklist li{
+    display:block; 
+    margin-bottom:15px; 
+    padding:0 0 15px 0; 
+    border-bottom:1px solid;
+}
+#footer .linklist li:last-child{
+    margin:0;
+    padding:0;
+    border:none;
+}
+#footer .linklist li::before, #footer .linklist li::after{
+    display:table; content:"";
+}
+#footer .linklist li, #footer .linklist li::after{
+    clear:both;
+}
+
+#footer .contact{
+    
+}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{
+    position:relative; padding-left:40px;
+}
+#footer .contact li *{
+    margin:0;
+    padding:0;
+    line-height:1.6;
+}
+#footer .contact li i{
+    display:block; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:30px; 
+    font-size:16px; 
+    text-align:center;
+}
+
+#footer input{
+    display:block;
+    width:100%; 
+    padding:8px;
+}
+#footer button{
+    padding:8px 18px 10px; 
+    text-transform:uppercase; 
+    font-weight:700; 
+    cursor:pointer;
+}
+
+#footer form{
+    border: none;
+    padding: 1px;
+}
+
+#footer ul{
+    display: block;
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+#footer h2 a{
+    color: #006062;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+#copyright{
+    margin: 0 auto;
+    display: block;
+}
+
+#copyright p {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-device-width: 480px){
+    #pageintro input{
+        margin: 5px auto;
+        width: 90%;
+    }
+    
+    .elements{
+        position: relative;
+        padding: 0 5px;
+    }
+    
+    .one_third{
+        width: 100%;
+        margin: 2px 0;
+        padding: 0 2px;
+        
+    }
+    
+    .heading{
+        text-align: center;
+        font-size: 20px;
+        line-height: normal;
+    }
+    
+    .group{
+        position: relative;
+    }
+    
+    .container{
+        padding-bottom: 0;
+    }
+    
+    
+    #footer .one_third {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    
+    
+    .mobilehidden{
+        display: none;
+    }
+
+}
+
