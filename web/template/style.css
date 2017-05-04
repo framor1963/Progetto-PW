@@ -329,6 +329,12 @@ letto su w3schools.com, da applicare ai padri di elementi floating se essi sono 
     margin-bottom: 5px;
 }
 
+
+.preventivo{
+    background-color: silver;
+    border: 2px solid #006062;
+    padding: 2%;
+}
 /*-----------------IDs------------------------ */
 #logo-header{
     padding: 25px 0;
